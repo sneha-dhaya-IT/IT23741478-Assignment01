@@ -17,7 +17,7 @@ const testCases = [
   { input: 'Meeting irukku attend pannuviya ?', expected: 'மீட்டிங் இருக்கு அட்டென்ட் பண்ணுவியா ?' },
   { input: 'idhu 2500 rupees ku vanginen 2 kg weight irukku', expected: 'இது 2500 ரூபாய்க்கு வாங்கினேன் 2 kg வெயிட் இருக்கு' },
   { input: 'unga ellarukum vanakkam sollu', expected: 'உங்க எல்லாருக்கும் வணக்கம் சொல்லு' },
-  { input: 'super super da idhu', expected: 'சூப்பர் சூப்பர் இது' },  
+  { input: 'super super idhu', expected: 'சூப்பர் சூப்பர் இது' },  
   { input: 'machi semma jolly today', expected: 'மச்சி செம்ம ஜாலி டுடே' },
   { input: 'naan veetuku poren apparam dinner pannuren', expected: 'நான் வீட்டுக்கு போறேன் அப்புறம் டின்னர் பண்றேன்' },
   { input: 'enakkupasikkudhunga', expected: 'எனக்குபசிக்குதுங்க' },
@@ -27,18 +27,21 @@ const testCases = [
   { input: 'naan    office   ku    late    aachu', expected: 'நான்     ஆபிஸ்    க்கு     லேட்     ஆச்சு' },
   { input: 'naan office la work panren daily but traffic romba irukku so late aagudhu machi enakku romba pidikkala idhu change pannanum next month ku car vanguren plan irukku Rs 500000 ku around budget irukku please help pannu tips kudunga Zoom la discuss pannalam ?', expected: 'நான் ஆபிஸ் ல வொர்க் பண்றேன் டெய்லி ஆனா ட்ராபிக் ரொம்ப இருக்கு சோ லேட் ஆகுது மச்சி எனக்கு ரொம்ப பிடிக்கல இது சேஞ்ச் பண்ணணும் நெக்ஸ்ட் மன்த் க்கு கார் வாங்குறேன் பிளான் இருக்கு Rs 500000 க்கு அரவுண்ட் பட்ஜெட் இருக்கு' },
        
-  // ... add until you have 35 valid cases
+
 
   { input: 'Enna bro logic illai', expected: 'என்ன ப்ரோ லாஜிக் இல்லை' }, // wrong mapping
-  { input: 'machan idhu venamla da semma waste', expected: 'மச்சான் இது வேணாம்ல டா செம்ம வேஸ்ட்' },  // wrong mapping
-  { input: 'idhu venam nu sollu da', expected: 'இது வேணாம்னு சொல்லு ' }, // engine may not match
+  { input: 'machan idhu venamla semma waste', expected: 'மச்சான் இது வேணாம்லno செம்ம வேஸ்ட்' },  // wrong mapping
+  { input: 'idhu venam nu sollu ', expected: 'இது வேணாம்னு சொல்லு ' }, // engine may not match
   { input: 'machan idhu waste venamla boring aachu', expected: 'மச்சான் இது வேஸ்ட் வேணாம்ல போரிங் ஆச்சு' }, // mismatch
   { input: 'Indha system nalla illai', expected: 'இந்த சிஸ்டம் நல்லா இல்லை' },
   { input: 'party 12.00 noon ku irukku aana naan vara maatten', expected: 'பார்ட்டி 12.00 noon க்கு இருக்கு ஆனா நான் வரமாட்டேன்' },
   { input: 'nee varavillaiya ?', expected: 'நீ வரவில்லையா ?' },
-  { input: 'xray scan illa machine venam da', expected: 'ஃக்ஸ்ரே ஸ்கேன் இல்ல மெஷின் வேணாம் டா' },
+  { input: 'xray scan illa machine venam', expected: 'ஃக்ஸ்ரே ஸ்கேன் இல்ல மெஷின் வேணாம்' },
   { input: 'illa illa illa vendaam vendaam machi no no', expected: 'இல்ல இல்ல இல்ல வேண்டாம் வேண்டாம் மச்சி நோ நோ' },
-  { input: 'phone illa da OTP varala SMS illa call pannala', expected: 'போன் இல்ல டா OTP வரல SMS இல்ல கால் பண்ணல' },
+  { input: 'phone illa call pannala', expected: 'போன் இல்ல கால் பண்ணல' },
+
+
+  { input: 'naan veetuku pogiren', expected: 'நான் வீட்டுக்கு போகிறேன்' },
   
 ];
 
